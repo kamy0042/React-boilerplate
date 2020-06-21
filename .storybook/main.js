@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-    stories: ['../src/**/*.stories.js'],
+    stories: ['../front/dev/components/**/*.stories.js'],
     addons: [
         {
             name: '@storybook/preset-typescript',
@@ -12,7 +12,7 @@ module.exports = {
                 forkTsCheckerWebpackPluginOptions: {
                     colors: true,
             },
-                include: [path.resolve(__dirname, '../src/components')],
+                include: [path.resolve(__dirname, '../front/dev/components')],
                 transpileManager: true,
             },
         },
