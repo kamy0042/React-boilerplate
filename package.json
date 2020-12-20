@@ -1,7 +1,7 @@
 {
     "scripts": {
         "build": "webpack --mode=production",
-        "dev": "webpack-dev-server --hot --inline --mode=development",
+        "dev": "webpack serve --hot --inline --mode=development",
         "storybook": "start-storybook -p 6006 -s ./src/assets",
         "build:storybook": "build-storybook -o build/storybook",
         "build-storybook": "build-storybook",
@@ -22,8 +22,8 @@
         "@storybook/preset-typescript": "^3.0.0",
         "@types/storybook__addon-info": "^5.2.3",
         "@types/storybook__addon-links": "^5.2.1",
-        "@typescript-eslint/eslint-plugin": "^4.10.0",
-        "@typescript-eslint/parser": "^4.10.0",
+        "@typescript-eslint/eslint-plugin": "4.0.1",
+        "@typescript-eslint/parser": "4.0.1",
         "babel-jest": "^26.6.3",
         "babel-loader": "^8.2.2",
         "babel-plugin-macros": "^3.0.1",
@@ -61,6 +61,7 @@
     "dependencies": {
         "@babel/polyfill": "^7.12.1",
         "@emotion/core": "^11.0.0",
+        "@emotion/react": "^11.1.2",
         "@reduxjs/toolkit": "^1.5.0",
         "@storybook/addon-actions": "^6.1.11",
         "@storybook/addon-knobs": "^6.1.11",

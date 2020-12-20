@@ -76,6 +76,7 @@ module.exports = {
             },
         ],
         'import/prefer-default-export': 'off',
+        'import/default': 'off',
         'react/jsx-filename-extension': [
             'error',
             {
