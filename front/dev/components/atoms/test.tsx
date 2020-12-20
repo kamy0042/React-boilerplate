@@ -1,3 +1,1 @@
-import React from 'react';
-
-const test = 'test';
+export const test = 'test';
