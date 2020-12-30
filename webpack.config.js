@@ -38,8 +38,8 @@ const config = {
         index: './front/dev/index.tsx',
     },
     output: {
-        filename: '[name].js',
-        path: `${outputPath}/js`,
+        filename: 'js/[name].js',
+        path: `${outputPath}`,
     },
 
     // 各ファイルに行う処理
@@ -84,6 +84,8 @@ const config = {
                             '@babel/proposal-class-properties',
                             // オブジェクト内でスプレッド構文を用いるために利用
                             '@babel/proposal-object-rest-spread',
+                            // optional chaining
+                            '@babel/plugin-proposal-optional-chaining',
                         ],
                     },
                 },
@@ -140,6 +142,9 @@ const config = {
     //----------------------------------------------------------
     resolve: {
         extensions: ['.ts', '.tsx', '.js', '.json'],
+        alias: {
+            '~': path.resolve(__dirname, 'front/dev'),
+        },
     },
 
     plugins: [
@@ -187,6 +192,7 @@ module.exports = (env, argv) => {
             stats: { colors: true },
             contentBase: outputPath,
             open: true,
+            hot: true,
             // URLを叩いてSPAにアクセスできるようにする
             historyApiFallback: true,
         };
