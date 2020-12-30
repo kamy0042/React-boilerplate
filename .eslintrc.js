@@ -110,8 +110,8 @@ module.exports = {
     ],
     settings: {
         'import/resolver': {
-            node: {
-                paths: ['src'],
+            weboack: {
+                config: 'webpack.config.js',
             },
         },
     },
