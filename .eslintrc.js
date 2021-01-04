@@ -110,7 +110,10 @@ module.exports = {
     ],
     settings: {
         'import/resolver': {
-            weboack: {
+            node: {
+                paths: ['front/dev'],
+            },
+            webpack: {
                 config: 'webpack.config.js',
             },
         },
